@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    All Skills Available
+{% endblock page_title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'challenges/all_skills.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <main class="main">
+        {% include "challenges/includes/new_challenge.html" %}
+        {% include "challenges/includes/new_goal.html" %}
+        {% include "challenges/includes/new_skill.html" %}
+
+        <h1>All made Skills</h1>
+        <ul class="main__skills">
+            {% for skill in skills %}
+                <li>{{ skill.title }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+{% endblock content %}

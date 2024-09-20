@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    Adding A New Skill
+{% endblock page_title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/add_skill.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <main class="main">
+        <h1>Add a New Skill</h1>
+        <form action="{% url 'add_skill' %}" method="post">
+            {% csrf_token %}
+            {{ skill_form.as_p }}
+            <button type="submit">Add Skill</button>
+        </form>
+    </main>
+{% endblock content %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/starting.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <main class="main">
+        <article class="main__article_present">
+            <section class="article__present">
+                <h1>MDK<br>Challenge</h1>
+                <img src="{% static "img/present_illustration_2.png" %}" alt="">
+            </section>
+            <hr class="line">
+            <p class="indent">It's a website that proposes you a couple of challenges to take according to the twelve months of the year.</p>
+            <p class="indent">If you are looking for some wonderful and cool projets to start with or some inspiring and excited projets to realize, just take a deep breathe and relax, explore those suggested ones <a href="{% url "all_challenges" %}">here</a> and pick some of them, then enjoy. Don't forget, if you want to stay on touch and be aware of any update on this platform, just put it in your bookmark and visit it regularly. These challenges either those that already exist or your ones will help you growing up your professionals skills as who you want to become maybe a <b>Developer</b>, an <b>Administrator</b>, a <b>Manager</b>, a <b>Scientist</b>, an <b>Advocate</b>, a <b>Jurist</b>, a <b>Teacher</b>, a <b>Doctor</b>, ...</p>
+            <p class="indent">Have fun choosing some of them to train yourself. What a pleasure to know that this platform will help you defining your goals to be achieved, setting your skills to be improved and making a challenge accordingly.</p>
+            <p>Do you want to start making a challenge? here we go just click the button below</p>
+            <a href="{% url "add_challenge" %}"><button>New Challenge</button></a>
+        </article>
+        <hr class="line">
+        <article class="main__article_testimonial">
+            <h2 class="title_testimonial">Testimonials</h2>
+            <section class="article__content">
+                <div class="div__content">
+                    <img src="{% static "img/face_img_1.jpg" %}" alt="profile">
+                    <h3>Pablo Denver</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi sint nemo incidunt, tenetur pariatur rem eaque optio id mollitia culpa provident asperiores.
+                    </p>
+                </div>
+                <div class="div__content">
+                    <img src="{% static "img/face_img_3.jpg" %}" alt="profile">
+                    <h3>Richard Karter</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi sint nemo incidunt, tenetur pariatur rem eaque optio id mollitia culpa provident asperiores.
+                    </p>
+                </div>
+                <div class="div__content">
+                    <img src="{% static "img/face_img_5.jpg" %}" alt="profile">
+                    <h3>Lawrence Lewis</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam excepturi sint nemo incidunt, tenetur pariatur rem eaque optio id mollitia culpa provident asperiores.
+                    </p>
+                </div>
+            </section>
+        </article>
+        <hr class="line">
+        <p>You want to start making a challenge? Just click this button below</p>
+        <a href="{% url "add_challenge" %}"><button>New Challenge</button></a>
+    </main>
+{% endblock content %}

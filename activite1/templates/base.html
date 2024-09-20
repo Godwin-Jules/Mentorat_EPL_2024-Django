@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block page_title %}MDK - Challenges{% endblock page_title%}</title>
+        <link rel="icon" href="{% static "img/favicon_modified_blue.png" %}">
+        <link rel="stylesheet" href="{% static "css/app.css" %}">
+        {% block css_files %}{% endblock css_files %}
+    </head>
+
+    <body>
+        <header class="header">
+            <h2 class="header__h2">
+                <a href="{% url "starting" %}"><span class="mdk">MDK</span> Challenges</a>
+            </h2>
+            <nav class="header__nav">
+                <a href="{% url "months" %}">Months</a>
+                <a href="{% url "all_challenges" %}">Challenges</a>
+                <a href="{% url "contact" %}">About</a>
+            </nav>
+        </header>
+
+        {% block content %}
+
+        {% endblock content%}
+
+        <footer class="footer">
+            <p>Designed by <a href="/" alt="Portfolio Page">MDK Jules</a></p>
+            <p>Club EPL - Copyright &copy; 2024 - Tous droits réservés</p>
+            <section class="footer__section_media">
+                <a href="https://github.com/Godwin-Jules" target="_blank"><img src="{% static "img/github.png" %}" alt="GitHub Profile"></a>
+                <a href="https://linkedin.com/in/kjules-developer" target="_blank"><img src="{% static "img/linkedin.png" %}" alt="LinkedIn Profile"></a>
+            </section>
+        </footer>
+    </body>
+
+</html>

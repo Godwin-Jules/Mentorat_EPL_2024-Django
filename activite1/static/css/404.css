@@ -1,0 +1,30 @@
+.main {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+.main h1 {
+    color: rgba(255, 0, 0, 0.706);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 5px;
+}
+.main p:first-of-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20vh;
+}
+.main p:last-of-type {
+    color: red;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    font-display: swap;
+    text-decoration: underline solid 2px;
+    text-underline-position: under;
+}

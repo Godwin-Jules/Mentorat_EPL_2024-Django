@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    Adding A New Challenge
+{% endblock page_title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/add_challenge.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <main class="main">
+        <h1>Add a New Challenge</h1>
+        <form action="{% url 'add_challenge' %}" method="post">
+            {% csrf_token %}
+            {{ challenge_form.as_p }}
+            <button type="submit">Add Challenge</button>
+        </form>
+
+        <section class="main__includes">
+            {% include "challenges/includes/new_goal.html" %}
+            {% include "challenges/includes/new_skill.html" %}
+        </section>
+    </main>
+{% endblock content %}

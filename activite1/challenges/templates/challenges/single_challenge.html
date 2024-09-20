@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    {{ name }}
+{% endblock page_title %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "challenges/single_challenge.css" %}">
+{% endblock css_files %}
+
+{% block content %}
+    <main class="main">
+        {% include "challenges/includes/new_challenge.html" %}
+        {% include "challenges/includes/new_goal.html" %}
+        {% include "challenges/includes/new_skill.html" %}
+
+        <h1>Details of the challenge</h1>
+        <div class="main__challenge">
+            <h2>{{ name }}</h2>
+            {% for skill in skills %}
+                <span>{{ skill }}</span>
+            {% endfor %}
+            <ul>
+                {% for goal in goals %}
+                    <li>{{ goal }}</li>
+                {% endfor %}
+            </ul>
+            {% if content != "" %}
+                <p>{{ content }}</p>
+            {% else %}
+                <p>No description available yet for this challenge.</p>
+            {% endif %}
+
+            <date>Last updated on {{ date|date:"d M Y" }}</date>
+        </div>
+    </main>
+{% endblock content %}
