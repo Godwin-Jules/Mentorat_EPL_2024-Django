@@ -1,0 +1,14 @@
+#btn__add,
+#btn__add:visited {
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    background-color: #2037aa;
+    border: 2px solid #2037aa;
+}
+#btn__add:hover {
+    background-color: inherit;
+    color: #2037aa;
+}
