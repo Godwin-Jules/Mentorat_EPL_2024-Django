@@ -13,8 +13,4 @@ urlpatterns = [
     path('goals/', views.GoalsView.as_view(), name="all_goals"),
     path('skills/', views.SkillsView.as_view(), name="all_skills"),
     path('challenges/', views.ChallengesView.as_view(), name='all_challenges'),
-    path('about/', views.ContactView.as_view(), name='contact'),
-    # path('<string>/', views.raise_404),
-    # path('<string1>/<string2>/', views.raise_404),
-    # path('<string1>/<string2>/<string3>/', views.raise_404),
 ]

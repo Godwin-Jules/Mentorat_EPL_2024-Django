@@ -187,13 +187,3 @@ class GoalsView(ListView):
     template_name = "challenges/all_goals.html"
     context_object_name = "goals"
     ordering = ["id", "label"]
-
-
-
-class ContactView(View):
-    def get(self, request):
-        return render(request, "challenges/contact.html")
-
-
-    def post(self, request):
-        pass
