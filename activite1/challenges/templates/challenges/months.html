@@ -6,23 +6,26 @@
 {% endblock page_title %}
 
 {% block css_files %}
-    <link rel="stylesheet" href="{% static "challenges/months.css" %}">
+        <link rel="stylesheet" href="{% static "challenges/includes/btn_add.css" %}">
+        <link rel="stylesheet" href="{% static "challenges/months.css" %}">
 {% endblock css_files %}
 
 {% block content %}
-    <main class="main">
-        {% include "challenges/includes/new_challenge.html" %}
-        {% include "challenges/includes/new_goal.html" %}
-        {% include "challenges/includes/new_skill.html" %}
+        <main class="main">
+            <h1>Challenges</h1>
 
-        <h1>Challenges</h1>
-        <div class="main__months">
-            {% for month in months %}
-                <li>
-                    <a href="{% url "challenges" month=month %}">{{ month|title }}</a>
-                </li>
-            {% endfor %}
-        </div>
-        <p>Just click on a month to see all its related challenges</p>
-    </main>
+            <div class="main__includes">
+                {% include "challenges/includes/new_challenge.html" %}
+                {% include "challenges/includes/new_goal.html" %}
+                {% include "challenges/includes/new_skill.html" %}
+            </div>
+            <div class="main__months">
+                {% for month in months %}
+                    <li>
+                        <a href="{% url "challenges" month=month %}">{{ month|title }}</a>
+                    </li>
+                {% endfor %}
+            </div>
+            <p>Just click on a month to see all its related challenges</p>
+        </main>
 {% endblock content %}

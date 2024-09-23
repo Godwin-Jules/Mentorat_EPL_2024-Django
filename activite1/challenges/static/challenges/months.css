@@ -1,0 +1,101 @@
+/* -------------------- main container -------------------- */
+.main {
+    margin: 20px;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+/* The title */
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* ---------- Add buttons ---------- */
+.main__includes {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* ---------- The months container ---------- */
+.main__months {
+    margin: 20px;
+    max-width: 500px;
+    border-radius: 35px;
+    background-color: #e0e0e0;
+    box-shadow: -5px 10px 15px #c9c9c9, 5px -5px 15px #c9c9c9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-auto-flow: column;
+}
+/* ----- link in li elements ----- */
+.main__months li a,
+.main__months li a:visited {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: #2037aa;
+    margin: 20px;
+    padding: 5px;
+}
+/* ----- li elements ----- */
+.main__months li {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 35px;
+}
+.main__months li:hover{
+    background-color: #2037aa;
+}
+.main__months li:hover a {
+    color: white;
+}
+/* left li elements */
+.main__months li:nth-of-type(n) {
+    border: none;
+    border-right: 1px solid white;
+    border-bottom: 3px solid white;
+}
+.main__months li:nth-of-type(6) {
+    border-bottom: none;
+}
+.main__months li:nth-of-type(1) {
+    border-radius: 30px 0 0 0;
+}
+.main__months li:nth-of-type(6) {
+    border-radius: 0 0 0 30px;
+}
+/* right li elements */
+.main__months li:nth-of-type(n + 7) {
+    border: none;
+    border-left: 2px solid white;
+    border-bottom: 3px solid white;
+}
+.main__months li:nth-of-type(12) {
+    border-bottom: none;
+}
+.main__months li:nth-of-type(7) {
+    border-radius: 0 30px 0 0;
+}
+.main__months li:nth-of-type(12) {
+    border-radius: 0 0 30px 0;
+}
+
+/* ---------- The bottom paragraph ----------*/
+.main p {
+    font-size: 1.5rem;
+    margin: 50px;
+    padding: 5px;
+}
